@@ -13,7 +13,7 @@ public class Homework{
             System.out.println("1 - Calculate the sum of numbers"); // Вычислить n-ое треугольного число (сумма чисел от 1 до n)
             System.out.println("2 - Calculate the result of multiplying numbers"); // n! (произведение чисел от 1 до n)
             System.out.println("3 - Print all prime numbers from 1 to 1000"); // Вывести все простые числа от 1 до 1000
-            System.out.println("4 -  Calculator"); //Реализовать простой калькулятор
+            System.out.println("4 - Calculator"); //Реализовать простой калькулятор
             System.out.println("0 - Terminate the application");
             System.out.println("================================");
             int no = Integer.parseInt(scanner.nextLine());
