@@ -5,10 +5,6 @@ import java.util.Scanner;
 public class Homework{
 
      static Scanner scanner = new Scanner(System.in);
-
-        /**
-      * @param args
-      */
      public static void main(String[]args){
 
             boolean f = true;
@@ -71,9 +67,8 @@ public class Homework{
 
 
 
-         static void TriangleSum() {
-     Scanner scanner = new Scanner(System.in);
-         System.out.print("Enter n: ");
+static void TriangleSum() {
+        System.out.print("Enter n: ");
         int n = scanner.nextInt();
          int sum = 0;
          for (int i = 1; i <= n; i++) {
@@ -82,10 +77,9 @@ public class Homework{
         
          System.out.println("Sum of numbers from 1 to " + n + " is " + sum);
      }
-
-     static void TriangleMulti(){
-     Scanner scanner = new Scanner(System.in);
-     System.out.print("Enter n: ");
+     
+static void TriangleMulti(){
+         System.out.print("Enter n: ");
          int n = scanner.nextInt();
          int fi = 1;
          for (int i = 1; i <= n; i++) {
@@ -97,7 +91,6 @@ public class Homework{
  
 
 static void Calculator(){
-    Scanner scanner = new Scanner(System.in);
     System.out.print("Enter A: ");
     int a = scanner.nextInt();
     System.out.print("Enter B: ");
