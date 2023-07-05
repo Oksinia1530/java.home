@@ -68,6 +68,7 @@ public class Homework{
 
 
 static void TriangleSum() {
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter n: ");
         int n = scanner.nextInt();
          int sum = 0;
@@ -79,6 +80,7 @@ static void TriangleSum() {
      }
      
 static void TriangleMulti(){
+         Scanner scanner = new Scanner(System.in);
          System.out.print("Enter n: ");
          int n = scanner.nextInt();
          int fi = 1;
@@ -91,6 +93,7 @@ static void TriangleMulti(){
  
 
 static void Calculator(){
+     Scanner scanner = new Scanner(System.in);
     System.out.print("Enter A: ");
     int a = scanner.nextInt();
     System.out.print("Enter B: ");
