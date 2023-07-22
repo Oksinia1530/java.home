@@ -94,8 +94,7 @@ public class Homework5 {
                             String number = bf.readLine();
                             System.out.println(FindSurname(number));
                         } else {
-                            //сохранение БД в файл
-                            if(act.equals("save")){
+                          if(act.equals("save")){
                                 savePB();
                             }
                         }
