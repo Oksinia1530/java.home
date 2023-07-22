@@ -20,7 +20,7 @@ public class test1 {
         pb.put(phone, name);
         save();
     }
-    }
+    
 
     private static void save() throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(new File("phonebook.txt")));
