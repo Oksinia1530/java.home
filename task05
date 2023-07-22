@@ -1,7 +1,3 @@
-/*В этот телефонный справочник с помощью метода add() можно добавлять записи, а с помощью метода get() искать номер телефона по фамилии.
-Следует учесть, что под одной фамилией может быть несколько телефонов (в случае однофамильцев),
-тогда при запросе такой фамилии должны выводиться все телефоны. */
-
 package ru.averinaoy.api.lesson1;
 
 
@@ -20,8 +16,10 @@ public class test1 {
 
     private static HashMap<String, String> pb = new HashMap<String, String>();
 
-    private static void add(String phone, String name) {
+    private static void add(String phone, String name) throws IOException {
         pb.put(phone, name);
+        save();
+    }
     }
 
     private static void save() throws IOException {
@@ -33,9 +31,9 @@ public class test1 {
     }
 
     public static void load() throws IOException {
-        File file = new File("phone.txt");
+        File file = new File("phonebook.txt");
         if (file.exists()) {
-            BufferedReader reader = new BufferedReader(new FileReader(new File("phone.txt")));
+            BufferedReader reader = new BufferedReader(new FileReader(new File("phonebook.txt")));
             String act;
             while ((act = reader.readLine()) != null) {
                 String[] dat = act.split(" ");
@@ -73,9 +71,7 @@ public class test1 {
 
     public static void main(String[] args) throws IOException {
         String act;
-        load();
-        print();
-        System.out.println("Action choice: 1 - add data, 2 - find numbers by last name , 3 - save, 4 - exit");
+        System.out.print("Welcome to the phonebook.\nAction choice: 1 - add data, 2 - find numbers by last name , 3 - phonebook printing, 4 - exit");
 
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         act = bf.readLine();
@@ -93,18 +89,16 @@ public class test1 {
                 for (String number : numbers) {
                     System.out.println(number);
                 }
-            } else if (act.equals("3")) {
-                save();
             }
-            System.out.println("Action choice: 1 - add data, 2 - find numbers by last name , 3 - save, 4 - exit");
+                else if (act.equals("3")) {
+                load();
+                print();
+            
+            }
+            System.out.println("Welcome to the phonebook.\nAction choice: 1 - add data, 2 - find numbers by last name , 3 - phonebook printing, 4 - exit");
             act = bf.readLine();
         }
     }
 }
-            
-        
-        
-    }
-
     
 
