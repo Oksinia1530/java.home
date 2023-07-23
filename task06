@@ -1,0 +1,39 @@
+package ru.averinaoy.api.lesson1;
+
+import java.util.HashSet;
+import javax.print.attribute.HashPrintServiceAttributeSet;
+
+public class Cat {
+    private String name;
+    private int age;
+
+    public Cat(String name, int age){
+        this.name = name;
+        this.age = age;
+    }
+}
+
+public boolean equals (Object o){
+    if (this == o) return true;
+    if (o == null || getClass() !=o.getClass()) return false;
+    Cat cat = (Cat)o;
+return age == cat.age &&
+Object.equals(name,cat.name);
+}
+publicint hachCode(){
+    return Object.hach(name,age);
+}
+public class Main {
+    public static void main(String[] args) {
+        HashSet<Cat> catSet = new HashSet<>();
+        Cat cat1 = new Cat ("Barsic", 1);
+        Cat cat2 = new Cat ("Murzik", 5);
+        catSet.add(cat1);
+        catSet.add(cat2);
+        for (Cat cat : catSet){
+            System.out.println(cat.getName()+ ":"+cat.getAge);
+        }
+    }
+    
+}
+}
