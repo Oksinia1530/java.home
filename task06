@@ -1,39 +1,44 @@
 package ru.averinaoy.api.lesson1;
 
 import java.util.HashSet;
-import javax.print.attribute.HashPrintServiceAttributeSet;
 
-public class Cat {
+public class task01 {
     private String name;
     private int age;
 
-    public Cat(String name, int age){
+    public task01(String name, int age){
         this.name = name;
         this.age = age;
     }
-}
 
-public boolean equals (Object o){
-    if (this == o) return true;
-    if (o == null || getClass() !=o.getClass()) return false;
-    Cat cat = (Cat)o;
-return age == cat.age &&
-Object.equals(name,cat.name);
-}
-publicint hachCode(){
-    return Object.hach(name,age);
-}
-public class Main {
+    public boolean equals (Object o){
+        if (this == o) return true;
+        if (o == null || getClass() !=o.getClass()) return false;
+        task01 cat = (task01)o;
+        return age == cat.age &&
+                Object.equals(name,cat.name);
+    }
+
+    public int hashCode(){
+        return Object.hashCode(name,age);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
     public static void main(String[] args) {
-        HashSet<Cat> catSet = new HashSet<>();
-        Cat cat1 = new Cat ("Barsic", 1);
-        Cat cat2 = new Cat ("Murzik", 5);
+        HashSet<task01> catSet = new HashSet<>();
+        task01 cat1 = new task01("Barsic", 1);
+        task01 cat2 = new task01("Murzik", 5);
         catSet.add(cat1);
         catSet.add(cat2);
-        for (Cat cat : catSet){
-            System.out.println(cat.getName()+ ":"+cat.getAge);
+        for (task01 cat : catSet){
+            System.out.println(cat.getName() + ":" + cat.getAge());
         }
     }
-    
-}
 }
