@@ -1,6 +1,7 @@
 package ru.averinaoy.api.lesson1;
 
 import java.util.HashSet;
+import java.util.Objects;
 
 public class task01 {
     private String name;
@@ -20,7 +21,7 @@ public class task01 {
     }
 
     public int hashCode(){
-        return Object.hashCode(name,age);
+        return Objects.hash(name, age);
     }
 
     public String getName() {
@@ -42,3 +43,4 @@ public class task01 {
         }
     }
 }
+
