@@ -12,6 +12,7 @@ public class task01 {
         this.age = age;
     }
 
+    @Override
     public boolean equals (Object o){
         if (this == o) return true;
         if (o == null || getClass() !=o.getClass()) return false;
@@ -20,6 +21,7 @@ public class task01 {
                 Object.equals(name,cat.name);
     }
 
+    @Override
     public int hashCode(){
         return Objects.hash(name, age);
     }
@@ -36,8 +38,14 @@ public class task01 {
         HashSet<task01> catSet = new HashSet<>();
         task01 cat1 = new task01("Barsic", 1);
         task01 cat2 = new task01("Murzik", 5);
+        task01 cat3 = new task01("Veterok", 8);
+        task01 cat4 = new task01("Puchok", 3);
+        task01 cat5 = new task01("Barsic", 1);
         catSet.add(cat1);
         catSet.add(cat2);
+        catSet.add(cat3);
+        catSet.add(cat4);
+        catSet.add(cat5);
         for (task01 cat : catSet){
             System.out.println(cat.getName() + ":" + cat.getAge());
         }
